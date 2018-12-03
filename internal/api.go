@@ -579,7 +579,7 @@ func logf(c *context, level int64, format string, args ...interface{}) {
 		Level:         &level,
 		Message:       &s,
 	})
-	if !IsSecondGen() && !IsDevAppServer() {
+	if !IsSecondGen() {
 		log.Print(logLevelName[level] + ": " + s)
 	}
 }
